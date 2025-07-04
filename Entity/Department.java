@@ -15,6 +15,10 @@ public class Department {
         this.employees = new ArrayList<>();
     }
 
+    public String getDepartmentId() {
+        return departmentId;
+    }
+
     public void addEmployee(Employee employee) {
         employees.add(employee);
     }
