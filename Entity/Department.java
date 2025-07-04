@@ -19,6 +19,30 @@ public class Department {
         return departmentId;
     }
 
+    public void setDepartmentId(String departmentId) {
+        this.departmentId = departmentId;
+    }
+
+    public String getDepartmentName() {
+        return departmentName;
+    }
+
+    public void setDepartmentName(String departmentName) {
+        this.departmentName = departmentName;
+    }
+
+    public String getDepartmentAddress() {
+        return departmentAddress;
+    }
+
+    public void setDepartmentAddress(String departmentAddress) {
+        this.departmentAddress = departmentAddress;
+    }
+
+    public List<Employee> getEmployees() {
+        return employees;
+    }
+
     public void addEmployee(Employee employee) {
         employees.add(employee);
     }
@@ -26,7 +50,7 @@ public class Department {
     public void showListEmployee() {
         for (Employee employee : employees) {
             employee.showInfo();
-        }
+        }   
     }
 
     public void sumSalary() {
@@ -34,6 +58,12 @@ public class Department {
         for (Employee employee : employees) {
             sum += employee.calculateSalary();
         }
-        System.out.println("Sum salary: " + sum);
+        System.out.println("Tổng tiền lương: " + sum);
     }
+
+    public void showInfo() {
+        System.out.println("Department ID: " + departmentId);
+        System.out.println("Department Name: " + departmentName);
+        System.out.println("Department Address: " + departmentAddress);
+    }   
 }
